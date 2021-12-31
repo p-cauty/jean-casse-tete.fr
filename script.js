@@ -148,12 +148,16 @@ const getTouches = evt => {
 };
 
 const handleTouchStart = evt => {
+  evt.preventDefault();
   const firstTouch = getTouches(evt)[0];
   xDown = firstTouch.clientX;
   yDown = firstTouch.clientY;
+  return false;
 };
 
 const handleTouchMove = evt => {
+  evt.preventDefault();
+
   if ( ! xDown || ! yDown ) {
     return;
   }
@@ -180,6 +184,8 @@ const handleTouchMove = evt => {
   /* reset values */
   xDown = null;
   yDown = null;
+
+  return false;
 };
 
 game.node.addEventListener('touchstart', handleTouchStart, false);
