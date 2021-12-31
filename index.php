@@ -28,7 +28,7 @@ file_put_contents($stats_file, json_encode($stats));
         <meta property="og:description" content="Pouet pouet c'est rigolo le casse-tête de Jean Castex" />
         <meta property="og:site_name" content="Jean Casse-tête" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://jean-casse-tete.fr/img/1.png" />
+        <meta property="og:image" content="https://jean-casse-tete.fr/card.png" />
         <meta property="og:url" content="https://jean-casse-tete.fr/" />
         <meta name="twitter:card" content="summary_large_image" />
 
