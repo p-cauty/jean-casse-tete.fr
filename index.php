@@ -38,7 +38,11 @@ file_put_contents($stats_file, json_encode($stats));
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="screen" />
     </head>
     <body class="text-center">
-        <h1 class="mt-3 mb-5">Jean Casse-tête 🤯</h1>
+        <h1 class="my-3">Jean Casse-tête 🤯</h1>
+        <div class="mb-5">
+            <img src="arrows.png" class="d-inline-block me-3" />
+            <img src="chars.png" class="d-inline-block ms-3" />
+        </div>
         <div class="game-container mx-auto mb-3">
             <div id="overlay"></div>
             <div id="game"></div>
@@ -50,7 +54,7 @@ file_put_contents($stats_file, json_encode($stats));
             <br /><br />
             <strong><?= $stats->games ?></strong> parties jouées, <strong><?= $stats->won ?></strong> victoires.
         </p>
-        <footer class="text-center">
+        <footer class="text-center mb-5">
             Fait par <a href="https://twitter.com/p_cauty">Peter Cauty</a> avec amour ❤️ <br />
             <a href="https://vitemadose.covidtracker.fr">Vaccinez-vous 💉</a> |
             <a href="https://github.com/phpitou/jean-casse-tete.fr"><i class="fab fa-github"></i>&nbsp;Code source</a><br />
