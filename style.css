@@ -1,0 +1,113 @@
+.game-container {
+    width: 512px;
+    height: 512px;
+    max-width: 95%;
+    max-height: 95vw;
+    font-size: 0;
+    position: relative;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center;
+    background-size: 100%;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 3px;
+    transition-duration: 1s;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+    background: gray;
+    border-radius: 3px;
+    position: relative;
+}
+
+.game-tile {
+    position: absolute;
+    width: 32%;
+    height: 32%;
+    display: inline-block;
+    background: no-repeat;
+    background-size: 312%;
+    border-radius: 3px;
+    transition-duration: .1s;
+}
+
+#tile-1 {
+    background-position: 1% 1%;
+}
+
+#tile-2 {
+    background-position: 50% 1%;
+}
+
+#tile-3 {
+    background-position: 99% 1%;
+}
+
+#tile-4 {
+    background-position: 1% 50%;
+}
+
+#tile-5 {
+    background-position: 50% 50%;
+}
+
+#tile-6 {
+    background-position: 99% 50%;
+}
+
+#tile-7 {
+    background-position: 1% 99%;
+}
+
+#tile-8 {
+    background-position: 50% 99%;
+}
+
+.game-tile:nth-child(1) {
+    top: 1%;
+    left: 1%;
+}
+
+.game-tile:nth-child(2) {
+    top: 1%;
+    left: 34%;
+}
+
+.game-tile:nth-child(3) {
+    top: 1%;
+    left: 67%;
+}
+
+.game-tile:nth-child(4) {
+    top: 34%;
+    left: 1%;
+}
+
+.game-tile:nth-child(5) {
+    top: 34%;
+    left: 34%;
+}
+
+.game-tile:nth-child(6) {
+    top: 34%;
+    left: 67%;
+}
+
+.game-tile:nth-child(7) {
+    top: 67%;
+    left: 1%;
+}
+
+.game-tile:nth-child(8) {
+    top: 67%;
+    left: 34%;
+}
