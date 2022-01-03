@@ -3,16 +3,6 @@
 $fi = new FilesystemIterator(__DIR__ . '/img', FilesystemIterator::SKIP_DOTS);
 $cnt = iterator_count($fi);
 
-$stats_file = __DIR__ . '/stats.json';
-
-if (!file_exists($stats_file)) {
-    file_put_contents($stats_file, json_encode(['games' => 0, 'won' => 0]));
-}
-
-$stats = json_decode(file_get_contents($stats_file));
-$stats->games++;
-file_put_contents($stats_file, json_encode($stats));
-
 ?>
 <!doctype html>
 <html lang="fr">
@@ -47,12 +37,10 @@ file_put_contents($stats_file, json_encode($stats));
             <div id="overlay"></div>
             <div id="game"></div>
         </div>
-        <a href="./" class="btn btn-primary mb-5">Recommencer</a>
-        <p class="mb-5">
+        <a href="./" class="btn btn-primary mb-4">Recommencer</a>
+        <p class="mb-4">
             Partager :
             <a title="sur Twitter" href="https://twitter.com/intent/tweet?url=https://jean-casse-tete.fr" class="px-3"><i class="fab fa-twitter"></i></a><a title="sur Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://jean-casse-tete.fr" class="px-3"><i class="fab fa-facebook"></i></a>
-            <br /><br />
-            <strong><?= $stats->games ?></strong> parties jouées, <strong><?= $stats->won ?></strong> victoires.
         </p>
         <footer class="text-center mb-5">
             Fait par <a href="https://twitter.com/p_cauty">Peter Cauty</a> avec amour ❤️ <br />

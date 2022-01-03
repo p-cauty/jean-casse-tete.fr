@@ -128,15 +128,25 @@ const randomize = async steps => {
 randomize(24).then();
 
 document.onkeydown = e => {
+
   if (e.key === 'ArrowUp' || e.key === 'z') {
+    e.preventDefault();
     game.move('up');
+    return false;
   } else if (e.key === 'ArrowRight' ||e .key === 'd') {
+    e.preventDefault();
     game.move('right');
+    return false;
   } else if (e.key === 'ArrowDown' || e.key === 's') {
+    e.preventDefault();
     game.move('down');
+    return false;
   } else if (e.key === 'ArrowLeft' || e.key === 'q') {
+    e.preventDefault();
     game.move('left');
+    return false;
   }
+
 };
 
 let xDown = null;
